@@ -1,0 +1,12 @@
+C:\Users\trium\source\repos\GameFramework\GameFramework\obj\Debug\net5.0\GameFramework.csproj.AssemblyReference.cache
+C:\Users\trium\source\repos\GameFramework\GameFramework\obj\Debug\net5.0\GameFramework.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\trium\source\repos\GameFramework\GameFramework\obj\Debug\net5.0\GameFramework.AssemblyInfoInputs.cache
+C:\Users\trium\source\repos\GameFramework\GameFramework\obj\Debug\net5.0\GameFramework.AssemblyInfo.cs
+C:\Users\trium\source\repos\GameFramework\GameFramework\obj\Debug\net5.0\GameFramework.csproj.CoreCompileInputs.cache
+C:\Users\trium\source\repos\GameFramework\GameFramework\bin\Debug\net5.0\GameFramework.deps.json
+C:\Users\trium\source\repos\GameFramework\GameFramework\bin\Debug\net5.0\GameFramework.dll
+C:\Users\trium\source\repos\GameFramework\GameFramework\bin\Debug\net5.0\GameFramework.pdb
+C:\Users\trium\source\repos\GameFramework\GameFramework\obj\Debug\net5.0\GameFramework.dll
+C:\Users\trium\source\repos\GameFramework\GameFramework\obj\Debug\net5.0\refint\GameFramework.dll
+C:\Users\trium\source\repos\GameFramework\GameFramework\obj\Debug\net5.0\GameFramework.pdb
+C:\Users\trium\source\repos\GameFramework\GameFramework\obj\Debug\net5.0\ref\GameFramework.dll
