@@ -16,7 +16,10 @@ namespace GameFramework.Factory
         /// Create factory for a weapon category
         /// </summary>
         /// <param name="ts"></param>
-        
+        public WeaponFactory(TraceSource ts)
+        {
+            ts.TraceEvent(TraceEventType.Information, 22, "Weapon factory created");
+        }
         public IItem ForgeWeapon(ItemCategory category)
         {
             TraceSource ts = new TraceSource("Game");

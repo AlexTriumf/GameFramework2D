@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<WorldSize>
+	<XY>
+		<key name="X" value="5"></key>
+		<key name="Y" value="5"></key>
+	</XY>
+</WorldSize>

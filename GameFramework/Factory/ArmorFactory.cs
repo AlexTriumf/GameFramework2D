@@ -17,6 +17,10 @@ namespace GameFramework.Factory
         /// </summary>
         /// <param name="ts"></param>
        
+        public ArmorFactory(TraceSource ts)
+        {
+            ts.TraceEvent(TraceEventType.Information, 22, "Armor factory created");
+        }
         public IItem ForgeArmor(ItemCategory category)
         {
             switch (category)

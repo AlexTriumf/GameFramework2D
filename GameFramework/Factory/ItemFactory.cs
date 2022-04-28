@@ -18,7 +18,10 @@ namespace GameFramework.Factory
         /// Create factory for a item category
         /// </summary>
         /// <param name="ts"></param>
-       
+        public ItemFactory(TraceSource ts)
+        {
+            ts.TraceEvent(TraceEventType.Information, 22, "Item factory");
+        }
         public IItem ForgeItem(ItemCategory category)
         {
             TraceSource ts = new TraceSource("Game");

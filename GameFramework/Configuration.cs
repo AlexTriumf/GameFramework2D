@@ -17,7 +17,7 @@ namespace GameFramework
         /// <summary>
         /// Singleton
         /// </summary>
-       private Configuration()
+        private Configuration()
         {
 
         }
@@ -31,28 +31,37 @@ namespace GameFramework
             }
             return _instance;
         }
-      /// <summary>
-      /// Returns URL of main directory and loads the config file using LINQ. Adds the position tolist
-      /// </summary>
-      /// <returns></returns>
-        public List<int> LoadConfiguration()
+        /// <summary>
+        /// Returns URL of main directory and loads the config file using LINQ. Adds the position tolist
+        /// </summary>
+        /// <returns></returns>
+        public List<Position> LoadConfiguration()
         {
             ts.Switch = new SourceSwitch("Load Configuration", "All");
             ts.TraceEvent(TraceEventType.Information, 1, "Load config file");
-            XmlDocument xmlDoc = new XmlDocument();
+
             // returns url of main directory which contains "/bin/Debug"
             var dir = System.IO.Path.GetDirectoryName(System.Reflection.Assembly
                 .GetExecutingAssembly().GetName().CodeBase);
             //correction in path to point it in Root directory
-            var mainpath = dir.Replace("\\bin\\Debug", "") + "\\config.xml";
+            var mainpath = dir.Replace("\\bin\\Debug\\net5.0", "") + "\\config.xml";
 
             XDocument document = XDocument.Load(mainpath);
             List<Position> poslist = new List<Position>();
-            var result = document.Element("position").Elements("key").Select(x => (int)x.Attribute("value"));
-            var q = (from elements in document.Elements("position").Elements("key").Elements("value") select (int)elements).ToList();
-            return q;
+            XmlDocument xmldoc = new XmlDocument();
+            xmldoc.Load(mainpath);
+
+            poslist = document.Descendants("POSITION")
+            .Select(p => new Position()
+            {
+                X = Convert.ToInt16(p.Element("XPOS").Attribute("value")?.Value),
+                Y = Convert.ToInt16(p.Element("YPOS").Attribute("value")?.Value)
+            }).ToList();
+
+
+            return poslist;
+
 
         }
-         
     }
 }
